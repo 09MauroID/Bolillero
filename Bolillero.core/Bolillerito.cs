@@ -1,6 +1,6 @@
 ﻿namespace Bolillero.core;
 
-public class Bolillero
+public class Bolillerito
 
 {
     public List<int> Adentro { get; set; }
@@ -9,10 +9,10 @@ public class Bolillero
     public IAzar Random { get; set; }
     
 
-    public Bolillero(int numero, IAzar random)
+    public Bolillerito(int numero, IAzar random)
     {
-        CrearBolillas(numero);
         Adentro = new List<int> ();
+        CrearBolillas(numero);
         Afuera = new List<int> ();
         Jugada = new List<int> ();
         Random = random;

@@ -70,4 +70,13 @@ public class Bolillerito
             Adentro.Add(i);
         }
     }
+    
+    public Bolillerito Clonar()
+        => new Bolillerito(this);
+    private Bolillerito(Bolillerito original)
+    {
+        Adentro = new List<int>(original.Adentro);
+        Afuera = new List<int>(original.Afuera);
+        Random = original.Random;
+    }
 }

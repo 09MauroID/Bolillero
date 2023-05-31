@@ -10,11 +10,17 @@ namespace Bolillero.core
         public long simularSinHilos(Bolillerito original, List<int> Jugada, int cantidad) 
             => original.JugarNVeces(Jugada, cantidad);
     }
-        public long simularconHilos(Bolillerito original, List<int> Jugada, int cantidad, int canHilos)
+        public long simularConHilos(Bolillerito original, List<int> Jugada, int cantidad, int cantHilos)
         {
+            
             Task<long>[] cantSimul = new Task<long>[cantHilos];
             {
-                for (int = 0, int < J)
+                for (int i = 0; i < cantidad; i++)
+                {
+                    var boli = original.Clonar();
+
+                    i = Jugada; cantSimul / cantHilos
+                }
             }
         }
 }

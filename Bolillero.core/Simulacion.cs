@@ -1,25 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Bolillero.core
 {
     public class Simulacion 
     {
-        public long simularSinHilos(Bolillerito original, List<int> Jugada, int cantidad) 
-            => original.JugarNVeces(Jugada, cantidad);
+        public long simularSinHilos(Bolillerito clonoriginal, List<int> Jugada, int cantidad) 
+            => clonoriginal.JugarNVeces(Jugada, cantidad);
     }
-        public long simularConHilos(Bolillerito original, List<int> Jugada, int cantidad, int cantHilos)
+        public long simularConHilos(Bolillerito clonoriginal, List<int> Jugada, int cantidad, int cantHilos)
         {
             
             Task<long>[] cantSimul = new Task<long>[cantHilos];
             {
                 for (int i = 0; i < cantidad; i++)
                 {
-                    var boli = original.Clonar();
-
-                    i = Jugada; cantSimul / cantHilos
+                    var boli = clonoriginal.Clonar();
+                    cantSimul[i] = Task<long>.Run(()=>(long)boli.clonoriginal);
+                    
                 }
             }
         }

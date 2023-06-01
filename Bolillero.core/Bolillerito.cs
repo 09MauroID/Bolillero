@@ -73,10 +73,10 @@ public class Bolillerito
     
     public Bolillerito Clonar()
         => new Bolillerito(this);
-    private Bolillerito(Bolillerito original)
+    private Bolillerito(Bolillerito clonoriginal)
     {
-        Adentro = new List<int>(original.Adentro);
-        Afuera = new List<int>(original.Afuera);
-        Random = original.Random;
+        Adentro = new List<int>(clonoriginal.Adentro);
+        Afuera = new List<int>(clonoriginal.Afuera);
+        Random = clonoriginal.Random;
     }
 }

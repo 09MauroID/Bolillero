@@ -5,7 +5,6 @@ public class Bolillerito
 {
     public List<int> Adentro { get; set; }
     public List<int> Afuera { get; set; }
-    public List<int> Jugada { get; set; }
     public IAzar Random { get; set; }
     
 
@@ -14,7 +13,6 @@ public class Bolillerito
         Adentro = new List<int> ();
         CrearBolillas(numero);
         Afuera = new List<int> ();
-        Jugada = new List<int> ();
         Random = random;
     }
     public int SacarBolilla()

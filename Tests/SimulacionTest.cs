@@ -19,4 +19,11 @@ public class SimulacionTest
         var jugarNVeces = prueba.JugarNVeces(Jugada: new List<int> {0,1}, 1);
         Assert.Equal(1, jugarNVeces);
     }
+
+    [Fact]
+    static async void simularConHilosAsync()
+    {
+        var jugarNVeces = await prueba.JugarNVeces(Jugada: new List<int> {0,1}, 1);
+        Assert.Equal(1, jugarNVeces); 
+    }
 }

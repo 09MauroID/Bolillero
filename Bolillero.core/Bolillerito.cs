@@ -77,5 +77,4 @@ public class Bolillerito
         Afuera = new List<int>(original.Afuera);
         Random =  original.Random;
     }
-
 }

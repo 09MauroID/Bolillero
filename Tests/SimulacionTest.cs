@@ -4,7 +4,9 @@ namespace Tests;
 public class SimulacionTest
 {
     public Bolillerito prueba {get; set;}
+    public Simulacion Simprueba {get; set;}
     public SimulacionTest () => prueba = new Bolillerito(10, new PrimeAzar());
+    public S
 
     [Fact]
     public void simularSinHilos()

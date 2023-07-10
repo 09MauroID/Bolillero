@@ -5,9 +5,11 @@ public class SimulacionTest
 {
     public Bolillerito prueba {get; set;}
     public Simulacion Simprueba {get; set;}
-    public SimulacionTest () => prueba = new Bolillerito(10, new PrimeAzar());
-    public S
-
+    public SimulacionTest () 
+    {
+    prueba = new Bolillerito(10, new PrimeAzar());
+    Simprueba = new Simulacion();
+    }
     [Fact]
     public void simularSinHilos()
     {
@@ -25,7 +27,7 @@ public class SimulacionTest
     [Fact]
     static async void simularConHilosAsync()
     {
-        var jugarNVeces = await prueba.JugarNVeces(Jugada: new List<int> {0,1}, 1);
-        Assert.Equal(1, jugarNVeces); 
+        var jugarNVeces = await Simprueba.JugarNVeces(Jugada: new List<int> {0,1}, 1);
+        Assert.Equal(1, jugarNVeces);
     }
 }

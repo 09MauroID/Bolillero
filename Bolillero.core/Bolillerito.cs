@@ -6,7 +6,6 @@ public class Bolillerito
     public List<int> Adentro { get; set; }
     public List<int> Afuera { get; set; }
     public IAzar Random { get; set; }
-    
 
     public Bolillerito(int numero, IAzar random)
     {
